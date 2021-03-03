@@ -29,20 +29,6 @@ public class NumberButton : MonoBehaviour
 
     private void OnClickButton()
     {
-        // Get the current float value from the calc and turn it into a string
-        float currentFloat = calculator.leftHandSide;
-        string lhsString = currentFloat.ToString();
-
-        // if the string is already too long, ignore it
-        if(lhsString.Replace(".", "").Length > 6)
-        {
-            return;
-        }
-
-        // Add this number's value to the string as text
-        lhsString += number.ToString();
-
-        // Convert the string back into a float
-        calculator.leftHandSide = float.Parse(lhsString);
+        calculator.SetNumber(number);
     }
 }

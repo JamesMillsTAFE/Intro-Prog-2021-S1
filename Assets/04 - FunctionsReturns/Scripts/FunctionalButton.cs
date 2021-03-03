@@ -16,23 +16,41 @@ public class FunctionalButton : MonoBehaviour
         Subtract,
         Add,
         Equals,
-        Decimal
+        Decimal,
+        None = -1
     }
 
     [SerializeField]
     private Function function = Function.Equals;
 
     private Button button;
+    private Calculator calculator;
 
     // Start is called before the first frame update
     void Start()
     {
+        calculator = gameObject.GetComponentInParent<Calculator>();
+
         button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(OnClickButton);
     }
 
     private void OnClickButton()
     {
-        Debug.Log(function.ToString());
+        switch (function)
+        {
+            case Function.Equals:
+                calculator.Calculate();
+                break;
+            case Function.ClearHistory:
+                calculator.ClearHistory();
+                break;
+            case Function.Delete:
+                calculator.Backspace();
+                break;
+            default:
+                calculator.SetFunction(function);
+                break;
+        }
     }
 }

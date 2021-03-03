@@ -3065,6 +3065,7 @@ GameObject:
   - component: {fileID: 1037575570}
   - component: {fileID: 1037575569}
   - component: {fileID: 1037575568}
+  - component: {fileID: 1037575571}
   m_Layer: 5
   m_Name: Calculator
   m_TagString: Untagged
@@ -3161,6 +3162,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1037575571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037575566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f71e57fc5d93ea14297c25649a516a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandSide: 0
+  rightHandSide: Infinity
+  calculatedValue: Infinity
+  outputDisplay: {fileID: 1306187026}
 --- !u!1 &1248885521
 GameObject:
   m_ObjectHideFlags: 0
